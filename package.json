@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "http-proxy": "^1.16.2",
+    "http-proxy-rules": "^1.1.0",
     "pm2": "^2.4.6"
   }
 }

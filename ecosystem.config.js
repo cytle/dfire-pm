@@ -9,6 +9,12 @@ module.exports = {
    */
   apps: [
     {
+      name: 'proxy',
+      cwd: path.resolve(__dirname, './'),
+      script: 'index.js',
+      watch: true
+    },
+    {
       name: 'new-meal',
       cwd: path.resolve(projects, 'new-meal'),
       script: npmRunScript,
