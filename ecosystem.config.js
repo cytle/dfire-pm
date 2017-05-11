@@ -1,6 +1,6 @@
 var path = require('path')
 var projects = path.resolve(__dirname, '../')
-var npmRunScript = path.resolve(__dirname, './npm-run.sh')
+var npmRunScript = path.resolve(__dirname, './scripts/npm-run.sh')
 
 module.exports = {
   /**
@@ -10,7 +10,7 @@ module.exports = {
   apps: [
     {
       name: 'proxy',
-      cwd: path.resolve(__dirname, './'),
+      cwd: path.resolve(__dirname, './proxy'),
       script: 'index.js',
       watch: true
     },
@@ -67,25 +67,25 @@ module.exports = {
    * Deployment section
    * http://pm2.keymetrics.io/docs/usage/deployment/
    */
-  deploy: {
-    production: {
-      user: 'node',
-      host: '212.83.163.1',
-      ref: 'origin/master',
-      repo: 'git@github.com:repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
-    },
-    dev: {
-      user: 'node',
-      host: '212.83.163.1',
-      ref: 'origin/master',
-      repo: 'git@github.com:repo.git',
-      path: '/var/www/development',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env dev',
-      env: {
-        NODE_ENV: 'dev'
-      }
-    }
-  }
+  // deploy: {
+  //   production: {
+  //     user: 'node',
+  //     host: '212.83.163.1',
+  //     ref: 'origin/master',
+  //     repo: 'git@github.com:repo.git',
+  //     path: '/var/www/production',
+  //     'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
+  //   },
+  //   dev: {
+  //     user: 'node',
+  //     host: '212.83.163.1',
+  //     ref: 'origin/master',
+  //     repo: 'git@github.com:repo.git',
+  //     path: '/var/www/development',
+  //     'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env dev',
+  //     env: {
+  //       NODE_ENV: 'dev'
+  //     }
+  //   }
+  // }
 }
