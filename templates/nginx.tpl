@@ -1,5 +1,5 @@
 server {
-  listen {{nginxPort}};
+  listen {{port}};
   #rewrite_log on;
   #access_log /var/log/nginx/2dfire.access.log;
   #error_log /var/log/nginx/2dfire.error.log notice;
@@ -14,7 +14,7 @@ server {
   location /build/ {
     rewrite ^/build/[^/]*/({{localApps}})/(.*)$  /build/static-$1/release/min/$2 last;
     rewrite ^/build/(.*)$ /whereask/$1 last;
-    alias {{appsCwd}};
+    alias {{projectsCWD}};
   }
 
   location /__webpack_hmr { rewrite ^/(.*)$ /dev/{{webpackHmrApp}}/$1; }

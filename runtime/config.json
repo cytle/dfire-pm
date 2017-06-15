@@ -1,4 +1,7 @@
 {
-  "localApps": [ "meal" ],
-  "projectsCWD": [ "meal" ]
+  "nginx": {
+    "port": 82,
+    "localApps": [],
+    "webpackHmrApp": "",
+  }
 }
