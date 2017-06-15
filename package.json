@@ -2,7 +2,7 @@
   "name": "pm",
   "version": "1.0.0",
   "description": "",
-  "main": "ecosystem.config.js",
+  "main": "index.js",
   "scripts": {
     "start": "pm2 ecosystem.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dot": "^1.1.2",
     "express": "^4.15.3",
     "express-http-proxy": "^1.0.3",
+    "handlebars": "^4.0.10",
     "http-proxy": "^1.16.2",
     "http-proxy-rules": "^1.1.0",
     "pm2": "^2.4.6"
