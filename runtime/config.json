@@ -2,6 +2,6 @@
   "nginx": {
     "port": 82,
     "localApps": [],
-    "webpackHmrApp": "",
+    "webpackHmrApp": ""
   }
 }

@@ -10,13 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.3",
     "dot": "^1.1.2",
     "express": "^4.15.3",
     "express-http-proxy": "^1.0.3",
+    "express-ws": "^3.0.0",
     "handlebars": "^4.0.10",
     "http-proxy": "^1.16.2",
     "http-proxy-rules": "^1.1.0",
-    "pm2": "^2.4.6"
+    "pm2": "^2.4.6",
+    "ws": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0",
